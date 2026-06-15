@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grand Rama Bistro Restro & Cafe - Premium dining experience with fresh ingredients, expert chefs, and comfortable ambiance. Book your table today!">
+    <meta name="keywords" content="restaurant, bistro, cafe, dining, Indian cuisine, Chinese cuisine, fast food, reservations">
+    <meta name="author" content="Grand Rama Bistro">
+    <title>Grand Rama Bistro Restro & Cafe - Premium Dining Experience</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-utensils"></i>
+                <span>Grand Rama Bistro</span>
+            </div>
+            
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="#ai-features" class="nav-link">AI Features</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="hero-title">Grand Rama Bistro</h1>
+            <p class="hero-subtitle">Restro & Cafe</p>
+            <p class="hero-tagline">"Where Great Food Meets Great Memories"</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToMenu()">View Menu</button>
+                <button class="btn btn-secondary" onclick="scrollToReservation()">Reserve a Table</button>
+                <button class="btn btn-outline" onclick="scrollToOrder()">Order Online</button>
+            </div>
+        </div>
+        
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Us</h2>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Welcome to <strong>Grand Rama Bistro Restro & Cafe</strong>, where culinary excellence meets warm hospitality. Our restaurant is a premier destination for food lovers seeking an unforgettable dining experience.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Sourced daily from trusted suppliers for maximum freshness and quality</p>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-chef"></i>
+                            <h3>Expert Chefs</h3>
+                            <p>Highly trained culinary professionals with years of international experience</p>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-couch"></i>
+                            <h3>Comfortable Ambiance</h3>
+                            <p>Elegant and luxurious dining space designed for your comfort</p>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-star"></i>
+                            <h3>Quality Service</h3>
+                            <p>Attentive staff dedicated to exceeding your expectations</p>
+                        </div>
+                        
+                        <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+                            <i class="fas fa-users"></i>
+                            <h3>Family-Friendly</h3>
+                            <p>Perfect destination for family gatherings and celebrations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <img src="assets/images/unnamed.jpg" alt="Warm dining room with wooden tables, hanging pendant lamps, lush green plant wall and elegant seating creating a cozy welcoming restaurant atmosphere">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Menu</h2>
+            
+            <div class="menu-filters" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="indian">Indian Cuisine</button>
+                <button class="filter-btn" data-filter="chinese">Chinese Cuisine</button>
+                <button class="filter-btn" data-filter="fastfood">Fast Food</button>
+                <button class="filter-btn" data-filter="cafe">Cafe Specials</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+            
+            <div class="menu-items-grid">
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Paneer Tikka</h3>
+                        <p>Marinated cottage cheese cubes grilled to perfection with aromatic spices</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹250</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Spring Rolls</h3>
+                        <p>Crispy rolls filled with fresh vegetables and served with sweet chili sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹180</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indian Cuisine -->
+                <div class="menu-item" data-category="indian" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Butter Chicken</h3>
+                        <p>Tender chicken in rich tomato and cream sauce with aromatic spices</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹320</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="indian" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Biryani</h3>
+                        <p>Fragrant basmati rice cooked with meat and traditional Indian spices</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹350</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chinese Cuisine -->
+                <div class="menu-item" data-category="chinese" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chow Mein</h3>
+                        <p>Stir-fried noodles with vegetables and your choice of protein</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹220</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="chinese" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fried Rice</h3>
+                        <p>Perfectly cooked rice stir-fried with vegetables, eggs, and soy sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹200</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fast Food -->
+                <div class="menu-item" data-category="fastfood" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Tandoori Chicken Burger</h3>
+                        <p>Spiced chicken patty with fresh vegetables and special sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹150</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="fastfood" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cheese Margherita Pizza</h3>
+                        <p>Classic pizza with fresh mozzarella, basil, and tomato sauce</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹280</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cafe Specials -->
+                <div class="menu-item" data-category="cafe" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Espresso</h3>
+                        <p>Strong and aromatic coffee served hot or iced</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹80</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="cafe" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Smooth coffee with steamed milk and foam</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹120</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Gulab Jamun</h3>
+                        <p>Soft milk solids dumplings in sugar syrup</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹100</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Warm chocolate cake with molten center and ice cream</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹180</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+                <div class="menu-item" data-category="beverages" data-aos="fade-up">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Fresh Mango Juice</h3>
+                        <p>Freshly squeezed mango juice served chilled</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹100</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="beverages" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-item-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Masala Chai</h3>
+                        <p>Traditional Indian spiced tea served hot</p>
+                        <div class="menu-item-footer">
+                            <span class="price">₹50</span>
+                            <button class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Ordering Section -->
+    <section id="order" class="ordering">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Quick Order</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Order now and get delivery in 30 minutes</p>
+            
+            <div class="ordering-methods" data-aos="fade-up" data-aos-delay="200">
+                <div class="order-method">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p>Direct phone ordering</p>
+                    <a href="tel:07417879191" class="btn btn-primary">Call: 07417879191</a>
+                </div>
+                
+                <div class="order-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Order</h3>
+                    <p>Send your order via WhatsApp</p>
+                    <a href="https://wa.me/917417879191" target="_blank" class="btn btn-primary">Order on WhatsApp</a>
+                </div>
+                
+                <div class="order-method">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Online Order</h3>
+                    <p>Place order through our website</p>
+                    <button class="btn btn-primary" id="order-btn">Order Online</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Reserve Your Table</h2>
+            
+            <div class="reservation-content">
+                <form class="reservation-form" id="reservationForm" data-aos="fade-right">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select number of guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8+ Guests</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" name="requests" rows="4" placeholder="Any special requests or dietary requirements?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Reserve Table</button>
+                </form>
+                
+                <div class="reservation-info" data-aos="fade-left">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instant Confirmation</li>
+                        <li><i class="fas fa-check"></i> Premium Seating</li>
+                        <li><i class="fas fa-check"></i> Special Offers</li>
+                        <li><i class="fas fa-check"></i> Flexible Cancellation</li>
+                        <li><i class="fas fa-check"></i> VIP Treatment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Gallery</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Food Photography</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Delicious Dishes</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Restaurant Interior</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Elegant Interior</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Cafe Area</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Cafe Ambiance</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Family Dining</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Family Dining Area</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Events</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Events & Celebrations</div>
+                </div>
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Special Moments</p>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">Guest Moments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Guests Say</h2>
+            
+            <div class="reviews-grid">
+                <div class="review-card" data-aos="fade-up">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="review-author">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Verified Guest</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Excellent food quality and outstanding service. The ambiance is perfect for a romantic dinner. Highly recommended!"</p>
+                </div>
+                
+                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="review-author">
+                            <h4>Priya Singh</h4>
+                            <p>Verified Guest</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Best dining experience in the city! Fresh ingredients, skilled chefs, and impeccable service. Worth every penny!"</p>
+                </div>
+                
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="review-author">
+                            <h4>Amit Patel</h4>
+                            <p>Verified Guest</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Perfect place to celebrate special occasions. The staff is attentive and the food is absolutely delicious!"</p>
+                </div>
+                
+                <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="review-author">
+                            <h4>Neha Gupta</h4>
+                            <p>Verified Guest</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Family-friendly environment with diverse menu options. Kids loved the food, and we had a wonderful time!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section id="ai-features" class="ai-features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">AI-Powered Services</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Experience the future of dining with our intelligent features</p>
+            
+            <div class="ai-features-grid">
+                <div class="ai-feature-card" data-aos="fade-up">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Food Recommendation Assistant</h3>
+                    <p>Our AI analyzes your preferences and suggests dishes tailored to your taste. Get personalized recommendations based on dietary preferences, past orders, and cuisine preferences.</p>
+                    <button class="btn btn-secondary" onclick="openAIAssistant('recommendation')">Try Now</button>
+                </div>
+                
+                <div class="ai-feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>AI Customer Support</h3>
+                    <p>24/7 intelligent chatbot support ready to answer your questions about menu, reservations, delivery status, and more. Instant responses to your queries anytime!</p>
+                    <button class="btn btn-secondary" onclick="openAIAssistant('chatbot')">Chat Now</button>
+                </div>
+                
+                <div class="ai-feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="ai-feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Smart Reservation Assistant</h3>
+                    <p>AI-powered booking system that suggests the best times, tables, and special offers based on your preferences and availability. Seamless reservation experience!</p>
+                    <button class="btn btn-secondary" onclick="openAIAssistant('reservation')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:07417879191">07417879191</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/917417879191" target="_blank">+91 7417879191</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
+                            <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
+                            <p>Sunday: 10:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-phone">Phone</label>
+                        <input type="tel" id="contact-phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            <!-- Google Maps Integration -->
+            <div class="map-container" data-aos="fade-up">
+                <h3>Visit Us</h3>
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Grand Rama Bistro</h4>
+                    <p>Premium dining experience with fresh ingredients and expert chefs.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <p>Mon - Thu: 11:00 AM - 10:00 PM</p>
+                    <p>Fri - Sat: 11:00 AM - 11:00 PM</p>
+                    <p>Sun: 10:00 AM - 10:00 PM</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Rama Bistro Restro & Cafe. All rights reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for food lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant Modal -->
+    <div class="modal" id="aiModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>AI Assistant</h2>
+                <button class="modal-close" onclick="closeAIAssistant()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="ai-message">
+                            <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Type your message...">
+                        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
